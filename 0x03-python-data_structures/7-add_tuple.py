@@ -1,14 +1,28 @@
 #!/usr/bin/python3
-def no_c(my_string):
-    length = len(my_string)
+def add_tuple(tuple_a=(), tuple_b=()):
+    len_a = len(tuple_a)
+    len_b = len(tuple_b)
 
-    j = 0
+    if len_a == 0:
+        a1 = 0
+        a2 = 0
+    elif len_a == 1:
+        a1 = tuple_a[0]
+        a2 = 0
+    else:
+        a1 = tuple_a[0]
+        a2 = tuple_a[1]
 
-    new_string = my_string[:]
+    if len_b == 0:
+        b1 = 0
+        b2 = 0
+    elif len_b == 1:
+        b1 = tuple_b[0]
+        b2 = 0
+    else:
+        b1 = tuple_b[0]
+        b2 = tuple_b[1]
 
-    for i in range(length):
-        if (my_string[i] == 'c' or my_string[i] == 'C'):
-            new_string = new_string[:(i - j)] + my_string[(i + 1):]
-            j += 1
+    new_tuple = (a1 + b1, a2 + b2)
 
-    return (new_string)
+    return (new_tuple)
