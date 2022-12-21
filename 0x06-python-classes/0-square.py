@@ -3,6 +3,7 @@
 Class Square: Defines a square
 """
 
-Class Square:
-    """ Makes an empty Square Class"""
+
+class Square:
+    """ Makes an empty Square Class """
     pass
